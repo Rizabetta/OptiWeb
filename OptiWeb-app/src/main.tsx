@@ -1,4 +1,3 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { createRoot } from "react-dom/client";
@@ -16,11 +15,7 @@ const root = createRoot(rootElement);
 
 root.render(
   <QueryClientProvider client={queryClient}>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-      </Routes>
-    </BrowserRouter>
+    <App />
     <ReactQueryDevtools />
   </QueryClientProvider>
 );
