@@ -1,0 +1,1 @@
+export const includeDevtools: boolean = import.meta.env.VITE_INCLUDE_DEVTOOLS === "true";
