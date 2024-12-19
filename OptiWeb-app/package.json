@@ -10,13 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.5.0",
     "isomorphic-unfetch": "^3.1.0",
     "nanoid": "^5.0.9",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-lazy-load-image-component": "^1.6.3",
     "react-query": "^3.39.3",
+    "react-redux": "^9.2.0",
     "react-router-dom": "^7.0.2",
+    "react-toastify": "^11.0.1",
     "react-virtualized": "^9.22.5"
   },
   "devDependencies": {
