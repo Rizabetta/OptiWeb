@@ -1,6 +1,25 @@
+import { useEffect, useState } from "react";
 import "./style.css";
 
 const Loader = () => {
+  const [loadingText, setLoadingText] = useState("Везем шоколадки");
+  const loadingTexts = [
+    "Везем шоколадки",
+    "Упаковываем подарки",
+    "Готовим к отправке",
+    "Подарки на пути к вам",
+  ];
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const currentIndex = loadingTexts.indexOf(loadingText);
+      const nextIndex = (currentIndex + 1) % loadingTexts.length;
+      setLoadingText(loadingTexts[nextIndex]);
+    }, 2000); 
+
+    return () => clearInterval(intervalId);
+  }, [loadingText, loadingTexts]);
+
   return (
     <div className="loader-container">
       <svg
@@ -23,6 +42,7 @@ const Loader = () => {
           strokeWidth="2"
         />
       </svg>
+      <div className="loader-message">{loadingText}</div>
     </div>
   );
 };

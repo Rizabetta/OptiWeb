@@ -9,10 +9,12 @@
 
     /* Bundler mode */
     "moduleResolution": "bundler",
+    "noEmit": true,
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
     "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "declaration": true,
     "declarationMap": true,
 
